@@ -4,46 +4,50 @@
 <head>
   <title>菜单动画</title>
   <style type="text/css">
-  body {
-    text-align: center;
-  }
+   body {
+     text-align: center;
+ }
 
-  .line {
-    width: 0px;
-    transition: width 1s, background-color 1s;
-    height: 3px;
-    color: #0f0;
-    background-color: #000;
-    margin: 0 auto;
-    margin-bottom: 10px;
-  }
+ .line {
+     width: 0px;
+     -webkit-transition: width 1s, background-color 1s;
+     -moz-transition: width 1s, background-color 1s;
+     transition: width 1s, background-color 1s;
+     height: 3px;
+     color: #0f0;
+     background-color: #000;
+     margin: 0 auto;
+     margin-bottom: 10px;
+ }
 
-  .title {
-    transition: color 1s;
-  }
+ .title {
+     -webkit-transition: color 1s;
+     -moz-transition: color 1s;
+     transition: color 1s;
+ }
 
-  .sel .title {
-    color: #5487C9;
-  }
+ .sel .title {
+     color: #5487C9;
+ }
 
-  .sel .line {
-    width: 100px;
-    background-color: #5487C9;
-  }
+ .sel .line {
+     width: 100px;
+     background-color: #5487C9;
+ }
 
-  .btn {
-    border: 1px solid #000;
-    width: 100px;
-    margin: 0 auto;
-    border-radius: 3px;
-    cursor: pointer;
-  }
+ .btn {
+     border: 1px solid #000;
+     width: 100px;
+     margin: 0 auto;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+     cursor: pointer;
+ }
 
-  .s-down {
-    background-color: #000;
-    color: #fff;
-  }
-
+ .s-down {
+     background-color: #000;
+     color: #fff;
+ }
   </style>
 </head>
 
