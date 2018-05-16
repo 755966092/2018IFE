@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>菜单动画</title>
+  <style type="text/css">
+  body {
+    text-align: center;
+  }
+
+  .line {
+    width: 0px;
+    transition: width 1s, background-color 1s;
+    height: 3px;
+    color: #0f0;
+    background-color: #000;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .title {
+    transition: color 1s;
+  }
+
+  .sel .title {
+    color: #5487C9;
+  }
+
+  .sel .line {
+    width: 100px;
+    background-color: #5487C9;
+  }
+
+  .btn {
+    border: 1px solid #000;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .s-down {
+    background-color: #000;
+    color: #fff;
+  }
+
+  </style>
+</head>
+
+<body>
+  <div class="wrap" id="wrap">
+    <h3 class="title">前端学院</h3>
+    <div class="line"></div>
+  </div>
+  <div id="btn" class="btn" onmousedown="sDown()" onmouseup="sUp()" onclick="toggleCls()">切换效果</div>
+  <script type="text/javascript">
+  function toggleCls() {
+  	var dom = document.getElementById('wrap').classList;
+    if (dom.length == 2) {
+      dom.remove('sel')
+    } else {
+      dom.add('sel')
+    }
+  }
+  function sDown() {
+    document.getElementById('btn').classList.add('s-down')
+  }
+  function sUp() {
+    document.getElementById('btn').classList.remove('s-down')
+  }
+
+  </script>
+</body>
+
+</html>
