@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 250px;
+            height: 350px;
+            position: relative;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            transition: all 1s;
+            -webkit-transform-style: preserve-3d;
+                    transform-style: preserve-3d; /* 双面div的子元素可保持其3D位置 */
+               -moz-transform-style: preserve-3d;
+            position: relative;
+        }
+        .bottom, .top {
+            width: 250px;
+            height: 350px;
+            border: 1px solid #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-backface-visibility: hidden; /* 当元素不面向屏幕时是否可见 */
+               -moz-backface-visibility: hidden;
+                    backface-visibility: hidden;
+        }
+
+        .bottom {
+            background: url(./image/反面.jpg);;
+            -webkit-transform: rotateY(180deg);
+               -moz-transform: rotateY(180deg);
+                    transform: rotateY(180deg);
+        }
+        .top {
+            background: url(./image/正面.jpg);
+        }
+        .wrap:hover {
+            -webkit-transform: rotateY(180deg);
+               -moz-transform: rotateY(180deg);
+                    transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="bottom">
+        </div>
+        <div class="top">
+        </div>
+    </div>
+</body>
+
+</html>
