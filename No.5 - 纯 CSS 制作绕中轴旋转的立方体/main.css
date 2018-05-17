@@ -5,17 +5,26 @@ body {
 .scene {
 	width: 200px;
 	height: 200px;
-	-webkit-perspective: 600px;
-	        perspective: 600px;
+	-webkit-perspective: 400px;
+	        perspective: 400px;
 	-webkit-perspective-origin: 50% 50%;
 	        perspective-origin: 50% 50%;
+
 }
 .wrap {
 	position: relative;
 	-webkit-transform-style: preserve-3d;
 	        transform-style: preserve-3d;
+
+	        
+	
+}
+.wrap:hover {
 	-webkit-animation: rotate 5s linear infinite;
 	        animation: rotate 5s linear infinite;
+	         -webkit-animation-fill-mode: forwards;
+	          		 animation-fill-mode: forwards;
+	        
 }
 .item {
 	width: 200px;
@@ -71,7 +80,7 @@ body {
 		70% {-webkit-transform: rotateY(252deg);transform: rotateY(252deg)}
 		80% {-webkit-transform: rotateY(288deg);transform: rotateY(288deg)}
 		90% {-webkit-transform: rotateY(324deg);transform: rotateY(324deg)}
-		100% {-webkit-transform: rotateY(360deg);transform: rotateY(360deg)}
+		100% {-webkit-transform: rotateY(324deg);transform: rotateY(324deg)}
 }
 @keyframes rotate {
 		0% {-webkit-transform: rotateY(0deg);transform: rotateY(0deg)}
@@ -84,5 +93,5 @@ body {
 		70% {-webkit-transform: rotateY(252deg);transform: rotateY(252deg)}
 		80% {-webkit-transform: rotateY(288deg);transform: rotateY(288deg)}
 		90% {-webkit-transform: rotateY(324deg);transform: rotateY(324deg)}
-		100% {-webkit-transform: rotateY(360deg);transform: rotateY(360deg)}
+		100% {-webkit-transform: rotateY(324deg);transform: rotateY(324deg)}
 }
