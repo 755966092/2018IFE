@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>No.6 - 利用 CSS animation 制作一个炫酷的 Slider</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="content">
+            <img src="./img/m (1).jpg" alt="" id="img1">
+            <img src="./img/m (2).jpg" alt="" id="img2">
+            <img src="./img/m (3).jpg" alt="" id="img3">
+            <img src="./img/m (4).jpg" alt="" id="img4">
+            <img src="./img/m (5).jpg" alt="" id="img5">
+        </div>
+        <div class="nav" id="nav">
+            <img src="./img/m (1).jpg" alt="" onclick="showCurImg(1)">
+            <img src="./img/m (2).jpg" alt="" onclick="showCurImg(2)">
+            <img src="./img/m (3).jpg" alt="" onclick="showCurImg(3)">
+            <img src="./img/m (4).jpg" alt="" onclick="showCurImg(4)">
+            <img src="./img/m (5).jpg" alt="" onclick="showCurImg(5)">
+        </div>
+    </div>
+    <script>
+        zIndex = 10;
+        function showCurImg(id) {
+            var dom =document.getElementById('img'+id)
+            dom.style.zIndex = zIndex
+            document.getElementById('nav').style.zIndex = zIndex+1
+            dom.classList.add('a'+id)
+            setTimeout(() => {
+                dom.classList.remove('a'+id)
+            }, 1000);
+            zIndex += 1;
+        }
+    </script>
+</body>
+</html>
