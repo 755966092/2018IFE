@@ -12,4 +12,4 @@
 
 [No.5 - 纯 CSS 制作绕中轴旋转的立方体](http://www.yuanjingzhuang.com/2018IFE/No.5%20-%20%E7%BA%AF%20CSS%20%E5%88%B6%E4%BD%9C%E7%BB%95%E4%B8%AD%E8%BD%B4%E6%97%8B%E8%BD%AC%E7%9A%84%E7%AB%8B%E6%96%B9%E4%BD%93/index.html)
 
-[No.6 - 利用 CSS animation 制作一个炫酷的 Slider](http://www.yuanjingzhuang.com/2018IFE/No.5%20-%20%E7%BA%AF%20CSS%20%E5%88%B6%E4%BD%9C%E7%BB%95%E4%B8%AD%E8%BD%B4%E6%97%8B%E8%BD%AC%E7%9A%84%E7%AB%8B%E6%96%B9%E4%BD%93/index.html)
+[No.6 - 利用 CSS animation 制作一个炫酷的 Slider](http://www.yuanjingzhuang.com/2018IFE/No.6%20-%20%E5%88%A9%E7%94%A8%20CSS%20animation%20%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E7%82%AB%E9%85%B7%E7%9A%84%20Slider/index.html)
