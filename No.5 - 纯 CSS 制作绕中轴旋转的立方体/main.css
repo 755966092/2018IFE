@@ -80,7 +80,7 @@ body {
 		70% {-webkit-transform: rotateY(252deg);transform: rotateY(252deg)}
 		80% {-webkit-transform: rotateY(288deg);transform: rotateY(288deg)}
 		90% {-webkit-transform: rotateY(324deg);transform: rotateY(324deg)}
-		100% {-webkit-transform: rotateY(324deg);transform: rotateY(324deg)}
+		100% {-webkit-transform: rotateY(360deg);transform: rotateY(360deg)}
 }
 @keyframes rotate {
 		0% {-webkit-transform: rotateY(0deg);transform: rotateY(0deg)}
@@ -93,5 +93,5 @@ body {
 		70% {-webkit-transform: rotateY(252deg);transform: rotateY(252deg)}
 		80% {-webkit-transform: rotateY(288deg);transform: rotateY(288deg)}
 		90% {-webkit-transform: rotateY(324deg);transform: rotateY(324deg)}
-		100% {-webkit-transform: rotateY(324deg);transform: rotateY(324deg)}
+		100% {-webkit-transform: rotateY(360deg);transform: rotateY(360deg)}
 }
