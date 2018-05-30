@@ -14,4 +14,4 @@
 
 [No.6 - 利用 CSS animation 制作一个炫酷的 Slider](http://www.yuanjingzhuang.com/2018IFE/No.6%20-%20%E5%88%A9%E7%94%A8%20CSS%20animation%20%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E7%82%AB%E9%85%B7%E7%9A%84%20Slider/index.html)
 
-[No.8 - 把 AE 动画转换成 Web 原生动画](http://www.yuanjingzhuang.com/2018IFE/No.6%20-%20%E5%88%A9%E7%94%A8%20CSS%20animation%20%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E7%82%AB%E9%85%B7%E7%9A%84%20Slider/index.html)
+[No.8 - 把 AE 动画转换成 Web 原生动画](http://www.yuanjingzhuang.com/2018IFE/No.8%20-%20%E6%8A%8A%20AE%20%E5%8A%A8%E7%94%BB%E8%BD%AC%E6%8D%A2%E6%88%90%20Web%20%E5%8E%9F%E7%94%9F%E5%8A%A8%E7%94%BB/index.html)
