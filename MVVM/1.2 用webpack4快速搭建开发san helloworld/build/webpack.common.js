@@ -3,43 +3,45 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 // 每次构建清理dist文件夹
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-// webpack及其插件似乎“知道”应该哪些文件生成
-var ManifestPlugin = require("webpack-manifest-plugin");
-// 
-const webpack = require('webpack');
+
 module.exports = {
 	entry: {
 		app: "./src/index.js",
 	},
 	output: {
 		filename: "[name].bundle.js",
-        path: path.resolve(__dirname, "dist"),
-        publicPath: '/'
+        path: path.resolve(__dirname, "../dist"),
 	},
 	plugins: [
 		new CleanWebpackPlugin(["dist"]),
-		new ManifestPlugin(),
 		new HtmlWebpackPlugin({
-			title: "Output Management"
+            title: "Production",
+            template: 'index.html'
         }),
-        new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin()
-	],
-    devtool: "inline-source-map",
-    devServer: {
-        contentBase: './dist',
-        hot: true
-      },
-	module: {
+    ],
+    module: {
 		rules: [
 			{
 				test: /\.css$/,
 				use: ["style-loader", "css-loader"]
+            },
+            {
+				test: /\.html$/,
+				use: ["html-loader"]
+			},
+			{
+				test: /\.san$/,
+				use: ["san-loader"]
 			},
 			{
 				test: /\.(png|svg|jpg|gif)$/,
 				use: ["file-loader"]
+			},
+			{
+				test: /\.js$/,
+				use: ["babel-loader"]
 			}
 		]
-	}
+    },
+  
 };

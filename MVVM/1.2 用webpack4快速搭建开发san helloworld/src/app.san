@@ -1,0 +1,50 @@
+<template>
+    <div>
+        <p class="hello">hello {{msg}}</p>
+        <p>计数: {{num}}</p>
+        <img src="./img/9d82d158ccbf6c816080a77ab03eb13532fa40e9.jpg" alt="" srcset="">
+    </div>
+</template>
+
+<script>
+    export default {
+        initData () {
+            return {
+                msg: 'San',
+                num: 0
+            };
+        },
+        compiled() {
+            console.log('组件视图模板编译完成')
+        },
+        inited() {
+            console.log('组件实例初始化完成')
+            let num = this.data.get('num')
+            setInterval(()=> {
+                this.data.set('num',++num)
+            }, 1000)
+        },
+        created() {
+            console.log('组件元素创建完成')
+        },
+        attached() {
+            console.log('组件已被附加到页面中')
+        },
+        detached() {
+            console.log('组件从页面中移除')
+        },
+        disposed() {
+            console.log('组件卸载完成')
+        },
+        updated () {
+            console.log('组件由于数据变化，视图完成一次刷新')
+        },
+    }
+</script>
+
+<style>
+    .hello {
+        color: blue;
+    }
+    
+</style>
