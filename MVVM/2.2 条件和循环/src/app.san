@@ -1,0 +1,125 @@
+<template>
+    <div>
+        <p>{{msg}}</p>
+        <!-- <div class="table">
+            <p class="">
+                <span>姓名</span>
+                <span>审核状态</span>
+                <span>操作</span>
+            </p>
+            <p s-for="item in data">
+                <span>{{item.name}}</span>
+
+                <span s-if="item.status==1">合格</span>
+                <span s-elif="item.status==0">未审核</span>
+                <span s-else>不合格</span>
+
+                <span s-if="item.status">删除</span>
+                <span s-else>审核</span>
+            </p>
+        </div> -->
+
+        <table id="tfhover" class="tftable" border="1">
+            <tr>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>审核状态</th>
+                <th>操作</th>
+            </tr>
+            <tr s-for="item,index in data">
+                <td>{{index}}</td>
+                <td>{{item.name}}</td>
+
+                <td s-if="item.status==1">合格</td>
+                <td s-elif="item.status==0">未审核</td>
+                <td s-else>不合格</td>
+
+                <td s-if="item.status">
+                    <button on-click="delItem(index)">删除</button>
+                </td>
+                <td s-else>
+                    <button on-click="senItem(index)">审核</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</template>
+
+<script>
+    export default {
+        initData() {
+            return {
+                msg: 'San',
+                data: [
+                    {
+                        name: '张三',
+                        status: 1
+                    },
+                    {
+                        name: '王五',
+                        status: 0
+                    },
+                    {
+                        name: '王五2',
+                        status: 0
+                    },
+                    {
+                        name: '王五3',
+                        status: 0
+                    },
+                    {
+                        name: '李四',
+                        status: 2
+                    },
+                ]
+            };
+        },
+        delItem(index) {
+            this.data.removeAt('data',index)
+            console.log('删除');
+            
+        },
+        senItem(index) {
+            console.log('审核');
+            let data = this.data.get('data');
+            data[index].status = 1;
+            this.data.set('data',data)
+        }
+
+    }
+</script>
+
+<style>
+    table.tftable {
+        font-size: 12px;
+        color: #333333;
+        width: 300px;
+        border-width: 1px;
+        border-color: #729ea5;
+        border-collapse: collapse;
+    }
+
+    table.tftable th {
+        font-size: 12px;
+        background-color: #acc8cc;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #729ea5;
+        text-align: center;
+    }
+
+    table.tftable tr {
+        background-color: #d4e3e5;
+    }
+
+    table.tftable td {
+        font-size: 12px;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #729ea5;
+        text-align: center;
+    }
+</style>
