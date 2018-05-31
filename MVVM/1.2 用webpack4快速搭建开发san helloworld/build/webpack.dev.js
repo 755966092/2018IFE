@@ -6,7 +6,8 @@ module.exports = merge(common, {
 	devtool: "inline-source-map",
 	devServer: {
 		contentBase: "./dist",
-		hot: true
+		hot: true,
+		inline: true//实时刷新
     },	
    
     plugins: [
