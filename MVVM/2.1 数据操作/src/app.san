@@ -1,0 +1,75 @@
+<template>
+        <div>
+            <label for="name">
+                姓名:
+                <input type="text" value="{= name =}" id="name">
+            </label>
+            <label for="age">
+                年龄:
+                <input type="number" value="{= age =}" id="age">
+            </label>
+            <label for="des">
+                简介:
+                <input type="text" value="{= des =}" id="des">
+            </label>
+            <div class="btn">
+                信息: <button on-click="clearText">移除信息</button>
+            </div>
+            <p><span class="label">姓名:</span> <span class="text">{{ name }}</span></p>
+            <p><span class="label">年龄:</span> <span class="text">{{ age }}</span></p>
+            <p><span class="label">简介:</span> <span class="text">{{ des }}</span></p>
+        </div>
+    </template>
+    
+    <script>
+        export default {
+            initData () {
+                return {
+                    msg: 'San',
+                    num: 0,
+                    name: '',
+                    age:'',
+                    des:''
+                };
+            },
+            clearText() {
+                // 清空填写信息
+                this.data.set('name','')
+                this.data.set('age','')
+                this.data.set('des','')
+            },
+        }
+    </script>
+    
+    <style>
+      
+        label {
+            padding: 5px 10px;
+            border: 1px solid #000;
+            margin: 10px;
+        }
+        .text {
+            display: inline-block;
+            box-sizing: border-box;
+            border-bottom: 1px solid #000;
+            min-width: 100px;
+        }
+        .label {
+            display: inline-block;
+            border-bottom: 1px solid transparent;
+        }
+        input {
+            outline: 0;
+            border: 0;
+        }
+        .btn {
+            margin: 20px 0;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+        input[type="number"]{
+            -moz-appearance: textfield;
+        }
+    </style>
