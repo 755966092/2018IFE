@@ -18,4 +18,4 @@
 
 ## MVVM
 
-[1.2 用webpack4 / parcel快速搭建开发san helloworld](http://www.yuanjingzhuang.com/2018IFE)
+[1.2 用webpack4 / parcel快速搭建开发san helloworld](http://www.yuanjingzhuang.com/2018IFE/MVVM/1.2%20%E7%94%A8webpack4%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91san%20helloworld/dist/index.html)
