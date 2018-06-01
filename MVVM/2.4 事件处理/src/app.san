@@ -1,0 +1,34 @@
+<template>
+    <div>
+       <parent />
+       <p>我是更高层父组件:{{msg}}</p>
+    </div>
+</template>
+
+<script>
+    import Mock from './static/mock-min.js'
+    import Parent from './parent.san'
+    export default {
+        initData() {
+            return {
+                isBlue: false,
+                color: '',
+                msg:'等待用户输入'
+            };
+        },
+        components: {
+            'parent': Parent
+        },
+        messages: {
+            'editIpt': function(val) {
+                console.log(val);
+                this.data.set('msg', val.value)
+            }
+        }
+      
+    }
+</script>
+
+<style>
+  
+</style>

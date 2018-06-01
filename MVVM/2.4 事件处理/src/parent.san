@@ -1,0 +1,38 @@
+<template>
+    <div class="wrap1">
+        <child />
+        我是父组件: {{msg}}
+    </div>
+</template>
+
+<script>
+    import Child from './child.san'
+    
+    export default {
+        initData() {
+            return {
+                title: '父组1件',
+                msg:'等待用户输入'
+            };
+        },
+        components: {
+            'child': Child
+        },
+        messages: {
+            'editIpt': function(val) {
+                console.log(val);
+                this.data.set('msg', val.value)
+                this.dispatch(val.name, val.value);
+                
+            }
+        },
+
+    }
+</script>
+
+<style>
+    .wrap1 {
+        border: 2px solid #f00;
+        padding: 20px;
+    }
+</style>
