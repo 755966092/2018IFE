@@ -1,37 +1,19 @@
 <template>
     <div>
-        <p>{{msg}}</p>
-        <!-- <div class="table">
-            <p class="">
-                <span>姓名</span>
-                <span>审核状态</span>
-                <span>操作</span>
-            </p>
-            <p s-for="item in data">
-                <span>{{item.name}}</span>
-
-                <span s-if="item.status==1">合格</span>
-                <span s-elif="item.status==0">未审核</span>
-                <span s-else>不合格</span>
-
-                <span s-if="item.status">删除</span>
-                <span s-else>审核</span>
-            </p>
-        </div> -->
-
+        <div>
+            <button class="btn" on-click="addItem">添加</button>
+        </div>
         <table id="tfhover" class="tftable" border="1">
             <tr>
-                <th>序号</th>
                 <th>姓名</th>
                 <th>审核状态</th>
                 <th>操作</th>
             </tr>
             <tr s-for="item,index in data">
-                <td>{{index}}</td>
                 <td>{{item.name}}</td>
 
                 <td s-if="item.status==1">合格</td>
-                <td s-elif="item.status==0">未审核</td>
+                <td s-elif="item.status==0">待审核</td>
                 <td s-else>不合格</td>
 
                 <td s-if="item.status">
@@ -47,44 +29,40 @@
 </template>
 
 <script>
+    import Mock from './static/mock-min.js'
     export default {
         initData() {
             return {
-                msg: 'San',
-                data: [
-                    {
-                        name: '张三',
-                        status: 1
-                    },
-                    {
-                        name: '王五',
-                        status: 0
-                    },
-                    {
-                        name: '王五2',
-                        status: 0
-                    },
-                    {
-                        name: '王五3',
-                        status: 0
-                    },
-                    {
-                        name: '李四',
-                        status: 2
-                    },
-                ]
+                data: []
             };
         },
-        delItem(index) {
-            this.data.removeAt('data',index)
-            console.log('删除');
-            
+        inited() {
+            // 生成随机数据
+            let d = Mock.mock({
+                'array|5': [
+                    {
+                        name: '@cname',
+                        'status|1': [0, 1, 2]
+                    }
+                ]
+            })
+            this.data.set('data', d.array)
         },
+        // 删除
+        delItem(index) {
+            this.data.removeAt('data', index)
+        },
+        // 审核
         senItem(index) {
-            console.log('审核');
             let data = this.data.get('data');
-            data[index].status = 1;
-            this.data.set('data',data)
+            this.data.set('data[' + index + '].status', 1)
+        },
+        // 新增
+        addItem() {
+            this.data.push('data', Mock.mock({
+                name: '@cname',
+                status: 0
+            }))
         }
 
     }
@@ -121,5 +99,9 @@
         border-style: solid;
         border-color: #729ea5;
         text-align: center;
+    }
+
+    .btn {
+        margin-bottom: 20px;
     }
 </style>
