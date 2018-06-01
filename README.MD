@@ -26,4 +26,4 @@
 
 [2.3 样式控制](http://www.yuanjingzhuang.com/2018IFE/MVVM/2.2%20%E6%9D%A1%E4%BB%B6%E5%92%8C%E5%BE%AA%E7%8E%AF/dist/index.html)
 
-[2.4事件处理](http://www.yuanjingzhuang.com/2018IFE/MVVM/2.2%20%E6%9D%A1%E4%BB%B6%E5%92%8C%E5%BE%AA%E7%8E%AF/dist/index.html)
+[2.4事件处理](http://www.yuanjingzhuang.com/2018IFE/MVVM/2.4%20%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/dist/index.html)

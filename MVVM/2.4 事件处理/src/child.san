@@ -16,7 +16,10 @@
             noticeParent() {
                 this.dispatch('editIpt', this.data.get('val'));
             },
-           
+            
+            inited() {
+                this.data.get("val")=='等待用户输入'?this.data.set("val",''):''
+            }
         }
     </script>
     
