@@ -1,0 +1,37 @@
+<template>
+    <div>
+        <div id="css" class="red {{isBlue?'blue':''}}" on-click="toggleColor(1)"></div>
+        <div id="style" class="red" style="{{color?'background: '+color:''}}" on-click="toggleColor(2)"></div>
+    </div>
+</template>
+
+<script>
+    import Mock from './static/mock-min.js'
+    export default {
+        initData() {
+            return {
+                isBlue: false,
+                color: ''
+            };
+        },
+        toggleColor(flag) {
+            if (flag == 1) {
+                this.data.set('isBlue', !this.data.get('isBlue'))
+            } else {
+                this.data.set('color', this.data.get('color') == 'blue' ? 'red' : 'blue')
+            }
+        }
+    }
+</script>
+
+<style>
+    .red {
+        background: red;
+        width: 100px;
+        height: 100px;
+    }
+
+    .blue {
+        background: blue;
+    }
+</style>
