@@ -22,4 +22,4 @@
 
 [2.1 数据操作](http://www.yuanjingzhuang.com/2018IFE/MVVM/2.1%20%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/dist/index.html)
 
-[2.2 条件和循环](http://www.yuanjingzhuang.com/2018IFE/MVVM/2.2 条件和循环/dist/index.html)
+[2.2 条件和循环](http://www.yuanjingzhuang.com/2018IFE/MVVM/2.2%20%E6%9D%A1%E4%BB%B6%E5%92%8C%E5%BE%AA%E7%8E%AF/dist/index.html)
