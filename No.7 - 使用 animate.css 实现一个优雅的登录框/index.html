@@ -13,6 +13,11 @@
                 0% {transform: scale(1) translateY(0px);}
                 100% {transform: scale(0.8) translateY(-15px);}
             }
+            @keyframes form__label2 {
+                0% {transform: scale(0.8) translateY(-15px);}
+                100% {transform: scale(1) translateY(0px);}
+                /* 100% {transform: scale(0.8) translateY(-15px);} */
+            }
             @keyframes form__input {
                 0% {}
                 100% {width: 100%;}
@@ -68,12 +73,16 @@
     <script src="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js"></script>
     <script>
         function getFocus(e) {
-            e.parentNode.classList.add('anima')
+            e.parentNode.getElementsByClassName('line')[0].style.animation = 'form__input 1s forwards'
+            e.parentNode.getElementsByClassName('form__label__content')[0].style.animation = 'form__label 1s forwards'
         }
         function clearFocus(e) {
-            e.parentNode.classList.add('anima2')
+            e.parentNode.getElementsByClassName('line')[0].style.animation = 'form__input2 1s forwards'
             if(document.getElementById('email').value && document.getElementById('password').value) {
                 document.getElementById('btn').classList.add('pulse')
+            }
+            if(!e.value) {
+                e.parentNode.getElementsByClassName('form__label__content')[0].style.animation = 'form__label2 1s forwards'
             }
         }
     </script>
