@@ -60,7 +60,7 @@ p {
     font-size: 1.6rem;
     outline: 0;
     border: none;
-    border-bottom: solid 1px #ddd;
+    /* border-bottom: solid 1px #ddd; */
 }
 .form__input:focus {
     background-position: 0 0;
