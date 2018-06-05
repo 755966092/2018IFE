@@ -31,3 +31,7 @@
 [2.4 事件处理](http://www.yuanjingzhuang.com/2018IFE/MVVM/2.4%20%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/dist/index.html)
 
 [2.6 插槽](http://www.yuanjingzhuang.com/2018IFE/MVVM/2.6/dist/index.html)
+
+## 零基础学院
+
+[第二十五天到第二十七天 倒数开始 滴答滴 滴答滴](http://www.yuanjingzhuang.com/2018IFE/basis/25.27/index.html)
