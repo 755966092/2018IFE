@@ -1,0 +1,32 @@
+<template>
+        <div class="wrap">
+            <p>子组件</p>
+            <input type="text" placeholder="输入内容..." value="{=val=}">
+            <button on-click="noticeParent">通知父组件</button>
+        </div>
+    </template>
+    
+    <script>
+        export default {
+            initData() {
+                return {
+                    val:''
+                };
+            },
+            noticeParent() {
+                this.dispatch('editIpt', this.data.get('val'));
+            },
+            
+            inited() {
+                this.data.get("val")=='等待用户输入'?this.data.set("val",''):''
+            }
+        }
+    </script>
+    
+    <style>
+        .wrap {
+            border: 2px solid #000;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>

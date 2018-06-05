@@ -1,0 +1,40 @@
+<template>
+        <div class="wrap">
+            <input type="text" on-keyup="getI" on-focus="getF" on-blur="getB" placeholder="{{placeholder}}" value="{=value=}" disabled="{{disabled}}" readonly="{{readonly}}">
+        </div>
+    </template>
+
+<script>
+    export default {
+        initData() {
+            return {
+                value: '',
+                placeholder: '',
+                disabled: '',
+                readonly: ''
+            };
+        },
+        inited() {
+            this.data.set('disabled', this.data.get('disabled') === 'true' ? true : false)
+            this.data.set('readonly ', this.data.get('readonly') === 'true' ? true : false)
+        },
+        getI(e) {
+            this.fire('input', e);
+            // this.fire('input', this.data.get('val'));
+        },
+        getF(e) {
+            this.fire('focus', e);
+        },
+        getB(e) {
+            this.fire('blur', e);
+        }
+    }
+</script>
+
+<style scoped>
+    .wrap {
+        border: 2px solid #000;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+</style>

@@ -1,0 +1,62 @@
+<template>
+    <div>
+        <san-input on-input="getIpt" on-focus="getFocus" on-blur="getBlur"  placeholder="输入文本..." value="{=value=}"  />
+        <p>{{value}}</p>
+
+        <san-checkbox on-change="getChange" trueValue="1" checked="{=checkboxVal=}" falseValue="0" indeterminate="{{indeterminate}}">开启</san-checkbox>
+        <!-- <san-checkbox on-change="getChange" trueValue="1" falseValue="0" indeterminate="{{indeterminate2}}">开启</san-checkbox> -->
+        <p>{{checkboxVal}}</p>
+
+      
+        <!-- <san-input placeholder="输入阿斯达岁的文本" value="{=val=}" readonly="true" disabled="false"/> -->
+    </div>
+</template>
+
+<script>
+    import Mock from './static/mock-min.js'
+    import Ipt from './components/san-input.san'
+    import CheBox from './components/san-checkbox.san'
+
+    export default {
+        initData() {
+            return {
+                value: '',
+                indeterminate: false,
+                indeterminate2: true,
+                checkboxVal: true,
+                on: [],
+
+            };
+        },
+        components: {
+            'san-input': Ipt,
+            'san-checkbox': CheBox
+        },
+        aaabbb() {
+            console.log(this.data.get('on'));
+
+        },
+        getIpt(e) {
+            console.log('输入事件');
+            console.log(e);
+            console.log();
+
+        },
+        getFocus(e) {
+            console.log('得到焦点');
+            console.log(e);
+        },
+        getBlur(e) {
+            console.log('失去焦点');
+            console.log(e);
+        },
+        getChange(e) {
+            console.log('复选框修改');
+        }
+
+    }
+</script>
+
+<style>
+
+</style>
