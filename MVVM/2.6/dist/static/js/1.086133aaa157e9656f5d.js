@@ -1,0 +1,2 @@
+webpackJsonp([1],{WMaE:function(t,e){},arFJ:function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var a={name:"box",props:{title:{type:String,default:"标题"},subTitle:{type:String,default:"标题"},content:{type:String,default:"标题"},time:{type:String,default:"标题"}}},r={render:function(){var t=this.$createElement;return(this._self._c||t)("div",{staticClass:"wrap"},[this._v("\n   asdasdasds\n")])},staticRenderFns:[]};var s=n("VU/8")(a,r,!1,function(t){n("WMaE")},"data-v-3d5fc7c2",null);e.default=s.exports}});
+//# sourceMappingURL=1.086133aaa157e9656f5d.js.map

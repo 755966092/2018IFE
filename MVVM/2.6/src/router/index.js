@@ -9,5 +9,8 @@ export default new Router({
         path: '/',
         name: 'HelloWorld',
         component: resolve => { require(["../components/HelloWorld.vue"], resolve) },
+    }, {
+        path: '/a',
+        component: resolve => { require(["../components/box.1.vue"], resolve) }
     }]
 })
